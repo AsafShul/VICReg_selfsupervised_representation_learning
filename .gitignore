@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+*.xml
+*.iml
+*.meta
+*.png
+data
+loaders
+trained_models
+wandb
+*.pdf
+*.zip
