@@ -1,20 +1,8 @@
 # VICReg model analysis and downstream applications
-## Training the model:
-I trained the model on the CIFAR10 dataset (without using the labels)
 
-The overall loss during the training:
-![Screenshot 2023-07-18 at 10 52 06](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/9c98dae6-230d-406d-9767-803fcc9930d4)
+## Exploring the learned representations
+trained on the CIFAR10 dataset (self suprevised training without the labels)
 
-The decomposition to the 3 loss components:
-![Screenshot 2023-07-18 at 10 52 29](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/a9dd07f4-4a91-4ecb-866a-d0172904c8a1)
-
-The overall loss on the test set:
-![Screenshot 2023-07-18 at 10 52 44](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/12fa42bd-d27c-446b-b673-0bca0fe7d87b)
-
-The decomposition to the 3 loss components:
-![Screenshot 2023-07-18 at 10 52 57](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/f7a93f10-4706-42ac-9de9-d45608512a1c)
-
-## Exploring the representations
 The 2D representation of the models embedding with PCA and TSNE decompositions:
 ![Screenshot 2023-07-18 at 10 53 18](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/c16cc20d-1173-44d2-ae01-968edf4808bf)
 
@@ -92,4 +80,19 @@ It seems that both models chose similar images as the most anomalous images, an 
 
 It seems to me that the original VICReg model’s clusters are more like the actual classes of the data, as we can clearly see separation in the plots on both coloring methods (by cluster and by class), and we can see sone similarities between those groups. This indicates that we indeed succeeded in the clustering and that our clusters hold semantic data on the classes. In contrast, the coloring based on the class we got in the model without the augmentations seems to be less defined and less correlated to the original classes. I think this indicates that the VICReg model capture the important semantic information regarding the classes better.
 
+-------------------------
+# appendix - The VICReg model train plots:
+I trained the model on the CIFAR10 dataset (without using the labels)
+
+The overall loss during the training:
+![Screenshot 2023-07-18 at 10 52 06](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/9c98dae6-230d-406d-9767-803fcc9930d4)
+
+The decomposition to the 3 loss components:
+![Screenshot 2023-07-18 at 10 52 29](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/a9dd07f4-4a91-4ecb-866a-d0172904c8a1)
+
+The overall loss on the test set:
+![Screenshot 2023-07-18 at 10 52 44](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/12fa42bd-d27c-446b-b673-0bca0fe7d87b)
+
+The decomposition to the 3 loss components:
+![Screenshot 2023-07-18 at 10 52 57](https://github.com/AsafShul/VICReg_selfsupervised_representation_learning/assets/44872433/f7a93f10-4706-42ac-9de9-d45608512a1c)
 
