@@ -5,6 +5,7 @@ from BaseModel import BaseModel
 
 
 class LinearProbModel(BaseModel):
+
     # training parameters
     BATCH_SIZE = 32
     LEARNING_RATE = 3e-4

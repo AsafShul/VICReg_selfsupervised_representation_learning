@@ -194,6 +194,7 @@ class CIFAR10NeighborsDataset(Dataset):
         self.knn = NearestNeighbors(n_neighbors=n_neighbors).fit(self.embeddings)
 
     def __getitem__(self, index):
+        
         possible_neighbors = self.knn.kneighbors(self.embeddings[index].reshape(1, -1), return_distance=False)[0]
         neighbor_idx = np.random.randint(self.n_neighbors)
 

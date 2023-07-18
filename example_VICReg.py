@@ -12,6 +12,7 @@ from VICRegModel import VICRegModel
 from CIFAR10Dataset import DataCreator
 from sklearn.neighbors import NearestNeighbors
 
+
 if __name__ == '__main__':
     # load model:
     model = VICRegModel()

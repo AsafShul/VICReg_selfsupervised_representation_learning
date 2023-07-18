@@ -30,6 +30,7 @@ class Questions:
     @staticmethod
     def p1q2_pca_tsne_plot(embeddings_loader, postfix='', reduction_dim=REDUCTION_DIM):
         print('Q2: Plotting PCA and TSNE')
+
         train_dataset = embeddings_loader.dataset.embeddings
         labels = embeddings_loader.dataset.targets
         print('\tfitting pca... ', end='')

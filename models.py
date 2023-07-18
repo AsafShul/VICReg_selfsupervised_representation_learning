@@ -4,6 +4,7 @@ from torchvision.models import resnet18
 
 class Encoder(nn.Module):
     def __init__(self, D):
+
         super(Encoder, self).__init__()
         self.D = D
         self.resnet = resnet18(pretrained=False)

@@ -6,6 +6,7 @@ from torch import nn
 
 class VICRegLoss(nn.Module):
     def __init__(self, eps, gamma, w_inv, w_var, w_conv):
+
         super(VICRegLoss, self).__init__()
         self.eps, self.gamma, self.w_inv, self.w_var, self.w_conv = eps, gamma, w_inv, w_var, w_conv
 

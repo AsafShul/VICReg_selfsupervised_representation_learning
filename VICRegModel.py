@@ -58,6 +58,7 @@ class VICRegModel(BaseModel):
                                           weight_decay=self.WEIGHT_DECAY)
 
     def forward(self, batch, deploy=False):
+
         if self.training and not deploy:
             z1 = self.decoder(self.encoder(batch[0].to(self.device)))
             z2 = self.decoder(self.encoder(batch[1].to(self.device)))

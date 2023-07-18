@@ -8,6 +8,7 @@ from abc import ABC, abstractmethod
 
 class BaseModel(nn.Module, ABC):
     def __init__(self):
+
         super(BaseModel, self).__init__()
         self.res_dir = os.path.join(utils.get_res_path(), self.TRAINED_MODELS_DIR)
         self.device = utils.get_device()

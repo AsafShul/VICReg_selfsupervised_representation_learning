@@ -6,6 +6,7 @@ from pathlib import Path
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--res_dir', type=str, default='./')
+
 args = parser.parse_args()
 
 

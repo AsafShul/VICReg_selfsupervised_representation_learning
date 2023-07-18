@@ -11,6 +11,7 @@ TRAIN_MODEL_NEIGHBORS_VIEWS = False
 
 if __name__ == '__main__':
     # --------------------------- q1 Training --------------------------------
+
     base_train_loader, base_test_loader = DataCreator.get_base_CIFAR10_loaders()
     views_train_loader, views_test_loader = DataCreator.get_views_CIFAR10_loaders()
 
